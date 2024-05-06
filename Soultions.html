@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<style>
+
+    body{
+        background-color: seagreen;
+    }
+
+    .navi{
+        display: inline-flex;
+        margin-top: 5px;
+        margin-left: -8px;
+        background-color: black;
+        height: 55px;
+        width: 1480px;
+
+    }
+
+    .nav1{
+        padding: 8px 20px 10px 20px;
+        position: relative;
+        top: 6px;
+        left: 935px;
+    }
+
+    ul h2{
+        margin-bottom: 50px;
+        margin-left: -10px;
+        margin-top: 13px;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        margin-left: -2px;
+    }
+
+    .nav1:hover{
+        background-color: seagreen;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .div1{
+        background-color: gray;
+        width: 1518px;
+        height: 500px;
+        margin-left: -7px;
+        background-image: url("5.jpeg");
+        background-size: cover;
+        opacity: 50%;
+        margin-top: -8px;
+    }
+
+    .topic{
+        color: white;
+        margin-top: -390px;
+        margin-left: 570px;
+        font-size: 60pt;
+    }
+
+    .a1{
+        width: 400px;
+        height: 350px;
+        margin-top: -500px;
+    }
+
+    img{
+        width: 400px;
+        height: 400px;
+    }
+
+    .main1{
+         display: flex;
+         flex-direction: row;
+         gap: 90px;
+         margin-left: 75px;
+        background-attachment: fixed;
+    }
+
+    .main2{
+        display: flex;
+        flex-direction: row;
+        gap: 90px;
+        margin-left: 75px;
+        margin-top: -10px;
+    }
+
+    img{
+        margin-top: 100px;
+    }
+
+    .b1,.b2,.b3{
+        width: 400px;
+        height: 30px;
+        margin-left: 75px;
+    }
+
+    .b2{
+        margin-left: 85px;
+    }
+
+    .b3{
+        margin-left: 87px;
+    }
+
+    .td1,.td2,.td3{
+        width: 400px;
+        height: 30px;
+        margin-left: 75px;
+        background-color: #cccccc;
+        text-align: center;
+    }
+
+    .td4,.td5,.td6{
+        width: 400px;
+        height: 30px;
+        margin-left: 75px;
+        background-color: #cccccc;
+        text-align: center;
+    }
+
+    .td1{
+        position: absolute;
+        margin-top: 100px;
+    }
+
+    .td2{
+        position: absolute;
+        margin-left: 565px;
+        margin-top: 100px;
+    }
+
+    .td3{
+        position: absolute;
+        margin-left: 1055px;
+        margin-top: 100px;
+    }
+
+    .td4{
+        position: absolute;
+        margin-top: 80px;
+    }
+
+    .td5{
+        position: absolute;
+        margin-left: 565px;
+        margin-top: 80px;
+    }
+
+    .td6{
+        position: absolute;
+        margin-left: 1055px;
+        margin-top: 80px;
+    }
+
+    .para1 p,.para2 p{
+        width: 300px;
+        color: seagreen;
+    }
+
+    .p4{
+        margin-left: 1120px;
+        margin-top: -125px;
+    }
+
+    .p3{
+        margin-left: 620px;
+        margin-top: -165px;
+    }
+
+    .p2{
+       margin-left: 130px;
+    }
+
+    .p7{
+        margin-left: 1120px;
+        margin-top: -113px;
+    }
+
+    .p6{
+        margin-left: 620px;
+        margin-top: -145px;
+    }
+
+    .p5{
+        margin-left: 130px;
+    }
+
+    .fpic{
+        width: 1520px;
+        height: 400px;
+        margin-left: -10px;
+        margin-bottom: -15px;
+    }
+
+    .fpic2{
+        background-color: #cccccc;
+        width: 1520px;
+        height: 400px;
+        margin-left: -10px;
+        margin-top: -390px;
+        position: absolute;
+        opacity: 40%;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 130px;
+        margin-top: -390px;
+    }
+
+    .links1{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 430px;
+        margin-top: -390px;
+    }
+
+    .links2{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 730px;
+        margin-top: -390px;
+    }
+
+    .links3{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 1030px;
+        margin-top: -390px;
+    }
+
+    .links a, .links1 a, .links2 a, .links3 a{
+        font-weight: bold;
+    }
+
+    h2{
+        color: white;
+        margin-left: -25px;
+    }
+
+    .icon{
+        position: absolute;
+        margin-left: 1300px;
+        margin-top: -50px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+</style>
+
+    <script>
+    function para2() {
+    var a = document.getElementById('p2');
+    p2.style.color = "white";
+    p2.style.transition="0.5s";
+    p2.style.scale=1.1;
+    }
+
+    function para3() {
+    var a = document.getElementById('p3');
+    p3.style.color = "white";
+    p3.style.transition="0.5s";
+    p3.style.scale=1.1;
+    }
+
+    function para4() {
+    var a = document.getElementById('p4');
+    p4.style.color = "white";
+    p4.style.transition="0.5s";
+    p4.style.scale=1.1;
+    }
+
+    function para5() {
+    var a = document.getElementById('p5');
+    p5.style.color = "white";
+    p5.style.transition="0.5s";
+    p5.style.scale=1.1;
+    }
+
+    function para6() {
+    var a = document.getElementById('p6');
+    p6.style.color = "white";
+    p6.style.transition="0.5s";
+    p6.style.scale=1.1;
+    }
+
+    function para7() {
+    var a = document.getElementById('p7');
+    p7.style.color = "white";
+    p7.style.transition="0.5s";
+    p7.style.scale=1.1;
+    }
+
+    function para7() {
+    var a = document.getElementById('p7');
+    p7.style.color = "white";
+    p7.style.transition="0.5s";
+    p7.style.scale=1.1;
+    }
+
+    </script>
+
+</head>
+<body>
+
+
+<nav class="n1" >
+    <!--suppress HtmlDeprecatedAttribute -->
+    <ul class="navi" type="none">
+        <h2>Greenfy</h2>
+        <li class="nav1">  <a class="a1" href="Home.html"> Home</a> </li>
+        <li class="nav1" > <a class="a1" href="Pollution.html">Pollution</a> </li>
+        <li class="nav1" > <a class="a1" href="How.html">How</a> </li>
+        <li class="nav1" > <a class="a1" href="Soultions.html">Solution</a> </li>
+        <li class="nav1" > <a class="a1" href="Feedbacks.html">Feedbacks</a> </li>
+    </ul>
+</nav>
+
+<div class="div1">
+
+</div>
+<h1 class="topic">Solutions <br>for<br> Pollutions</h1>
+
+<h3 class="td1">Water pollutions</h3> <h3 class="td2">Soil pollution</h3> <h3 class="td3">Noise pollution</h3>
+<div class="main1">
+    <img src="water.jpeg">
+    <img src="soil.jpeg">
+    <img src="noise.jpeg">
+</div>
+<button class="b1" onclick="para2()">Show more</button> <button class="b2" onclick="para3()">Show more</button> <button class="b3" onclick="para4()">Show more</button>
+<div class="para1">
+    <p class="p2" id="p2"><strong>Wastewater</strong>
+        Wastewater treatment facilities have the technology and tools to remove most contaminants through biological, physical and chemical processes. For example, wastewater treatment allows water to flow through different disinfection chambers to reduce the toxicity levels of water contaminants and prevent leakage into the water system
+    </p>
+    <p class="p3" id="p3"><strong>Green agriculture</strong>
+        Sustainable agriculture is essential as it is meant to control the impact on the cultivated environment, by minimizing the external contributions (phytosanitary products), by diversifying the cultures and by using biological treatments</p>
+    <p class="p4" id="p4"><strong>Reduce noise</strong>
+        avoid very noisy leisure activities, opt for alternatives means of transport such as bicycles or electric vehicles over taking the car, do your housework at recommended times, insulate homes with noise-absorbing materials, etc.</p>
+</div>
+
+<h3 class="td4">Water pollutions</h3> <h3 class="td5">Soil pollution</h3> <h3 class="td6">Noise pollution</h3>
+<div class="main2">
+    <img src="plastic.jpeg">
+    <img src="air.jpeg">
+    <img src="sea.jpg">
+</div>
+<button class="b1" onclick="para5()">Show more</button> <button class="b2" onclick="para6()">Show more</button> <button class="b3" onclick="para7()">Show more</button>
+<div class="para2">
+    <p class="p5" id="p5"><strong>Don’t Buy Plastic</strong>
+        Keep money away from plastic manufacturers by doing your best to avoid purchasing virgin plastic items.
+        Action Item: A lot of what you need can be found (already made) at second-hand stores or by using other alternatives such as glass, metal, bamboo, and more.
+    </p>
+    <p class="p6" id="p6"><strong>Use public transport</strong>
+        When more people use public transportation, the number of private vehicles on the road gets smaller, thereby reducing the amount of pollution that is released into the atmosphere</p>
+    <p class="p7" id="p7"><strong>Manage oil spills</strong>
+        It’s imperative that governments and industries alike take measures to prevent oil spills and respond quickly to contain and clean up any spills that do occur. Whether it’s investing in spill response technology, improving the safety standards for offshore drilling, or enforcing strict preventative regulations, much can be done to avoid oil spills</p>
+</div>
+
+<div class="footer">
+    <img class="fpic" src="foot.jpeg" alt="Jungle">
+    <div class="fpic2"></div>
+
+    <div class="links">
+        <h2>Who are we</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="links1">
+        <h2>Developer</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="links2">
+        <h2>Developer</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="links3">
+        <h2>Developer</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="icon">
+        <a href="https://www.facebook.com/matheeshadewmini?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><i class="fa-brands fa-google"></i></a>
+        <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/microsoft/vscode/issues/63001"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+</div>
+
+</body>
+</html>

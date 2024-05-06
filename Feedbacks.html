@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--suppress XmlInvalidId -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Page</title>
+<link rel="stylesheet" href="vue_style.css">
+
+<style>
+
+    body{
+        background-color: seagreen;
+    }
+
+    .navi{
+        display: inline-flex;
+        margin-top: 5px;
+        margin-left: -31px;
+        background-color: black;
+        height: 55px;
+        width: 100%;
+    }
+
+    .nav1{
+        padding: 8px 20px 10px 20px;
+        position: relative;
+        top: 6px;
+        left: 945px;
+
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        margin-left: -2px;
+    }
+
+    ul h2{
+        margin-bottom: 50px;
+        margin-left: 4px;
+        margin-top: 13px;
+    }
+
+    .nav1:hover{
+        background-color: seagreen;
+        /*padding-bottom: 42px;*/
+        border-radius: 10px 10px 0 0;
+    }
+
+    #app {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+    }
+    /* .feedback {
+        margin-bottom: 20px;
+    } */
+    #app h1{
+        position: absolute;
+        top: -40px;
+        left: 0;
+    }
+    .feedback input[type="text"],
+    .feedback textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+
+    }
+    .feedback button {
+        padding: 8px 15px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .feedback button:hover {
+        background-color: #45a049;
+    }
+    .feedback-list {
+        list-style: none;
+        padding: 10px;
+    }
+    .feedback-item {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    h1{
+        margin-top: -10px;
+    }
+
+    .area{
+        height: 200px;
+    }
+
+    .fpic{
+        width: 1520px;
+        height: 400px;
+        margin-left: -10px;
+        margin-bottom: -15px;
+    }
+
+    .fpic2{
+        background-color: #cccccc;
+        width: 1520px;
+        height: 400px;
+        margin-left: -10px;
+        margin-top: -390px;
+        position: absolute;
+        opacity: 40%;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 130px;
+        margin-top: -390px;
+    }
+
+    .links1{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 430px;
+        margin-top: -390px;
+    }
+
+    .links2{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 730px;
+        margin-top: -390px;
+    }
+
+    .links3{
+        display: flex;
+        flex-direction: column;
+        line-height: 50px;
+        margin-left: 1030px;
+        margin-top: -390px;
+    }
+
+    .links a, .links1 a, .links2 a, .links3 a{
+        font-weight: bold;
+    }
+
+    h2{
+        color: white;
+        margin-left: -25px;
+    }
+
+    .icon{
+        position: absolute;
+        margin-left: 1300px;
+        margin-top: -50px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .footer{
+        margin-top: 100px;
+    }
+
+    .sec{
+        background-color: gray;
+        width: 800px;
+        height: 500px;
+        margin-top: 460px;
+        margin-left: 185px;
+    }
+
+</style>
+
+</head>
+<body>
+<nav class="n1" >
+    <!--suppress HtmlDeprecatedAttribute -->
+    <ul class="navi" type="none">
+        <h2>Greenfy</h2>
+        <li class="nav1">  <a class="a1" href="Home.html"> Home</a> </li>
+        <li class="nav1" > <a class="a1" href="Pollution.html"> Pollutions</a> </li>
+        <li class="nav1" > <a class="a1" href="How.html"> How</a> </li>
+        <li class="nav1" > <a class="a1" href="Soultions.html"> Solutions</a> </li>
+        <li class="nav1" > <a class="a1" href="Feedbacks.html"> Feedbacks</a> </li>
+    </ul>
+</nav>
+
+<div class="sec">
+
+</div>
+
+    <div id="app">
+    <h1>Feedback</h1>
+    <!-- Feedback form -->
+    <div class="feedback">
+        <label for="text">Name: </label>
+        <input type="text" v-model="name" placeholder="Your Name">
+        <label for="textarea">Comment: </label>
+        <textarea class="area" v-model="comment" placeholder="Your Comment"></textarea>
+        <button @click="submitFeedback">Submit Feedback</button>
+    </div>
+    <!-- Display feedback -->
+    <ul class="feedback-list">
+        <li v-for="(feedback, index) in feedbacks" :key="index" class="feedback-item">
+        <strong>{{ feedback.name }}</strong>: <br><br>{{ feedback.comment }}
+        </li>
+    </ul>
+    </div>
+
+<div class="footer">
+    <img class="fpic" src="foot.jpeg" alt="Jungle">
+    <div class="fpic2"></div>
+
+    <div class="links">
+        <h2>Who are we</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="links1">
+        <h2>Developer</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="links2">
+        <h2>Developer</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="links3">
+        <h2>Developer</h2>
+        <a href="">About us</a>
+        <a href="">Our supporters</a>
+        <a href="">Our donation</a>
+        <a href="">Startup</a>
+        <a href="">Charity</a>
+        <a href="">Commiunity</a>
+    </div>
+
+    <div class="icon">
+        <a href="https://www.facebook.com/matheeshadewmini?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://support.google.com/answer/2451065?hl=en"><i class="fa-brands fa-google"></i></a>
+        <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/microsoft/vscode/issues/63001"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+</div>
+
+
+<!-- Vue.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+        name: '',
+        comment: '',
+        feedbacks: []
+        },
+        methods: {
+        submitFeedback() {
+            if (this.name.trim() !== '' && this.comment.trim() !== '') {
+                this.feedbacks.push({ name: this.name, comment: this.comment });
+                this.name = '';
+                this.comment = '';
+            }
+        }
+    }
+    });
+</script>
+</body>
+</html>
